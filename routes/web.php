@@ -2,14 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
    
-    return view('dashbord');
+    return view('dashboard');
 });
-
-
-
-
 
 
 
@@ -21,3 +18,7 @@ Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('regi
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+// // Example dashboard route
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware('auth')->name('dashboard');
